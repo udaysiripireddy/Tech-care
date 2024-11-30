@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Tech Care Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Tech care</div>
+        <nav class="nav">
+            <a href="#">Overview</a>
+            <a href="#">Patients</a>
+            <a href="#">Schedule</a>
+            <a href="#">Messages</a>
+            <a href="#">Transactions</a>
+        </nav>
+        <div class="user-info">
+            <strong>Dr. Jose Simmons</strong>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Patients</h3>
+            <ul id="patient-list" class="patient-list">
+                <span class="dots">...</span>
+            </ul>
+        </aside>
+        <main class="main">
+            <h2>Diagnosis History</h2>
+            <div class="diagnosis">
+                <div class="chart">
+                    <h3>Blood Pressure</h3>
+                    <p id="bpStats"></p>
+                    <div id="chart-container">
+                        <canvas id="diagnosis-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <h4>Respiratory Rate</h4>
+                        <p id="respiratory-rate"></p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Temperature</h4>
+                        <p id="temperature"></p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Heart Rate</h4>
+                        <p id="heart-rate"></p>
+                    </div>
+                </div>
+                <!-- Chart Container -->
+                <div id="chart-container">
+                    <canvas id="diagnosis-chart"></canvas>
+                </div>
+            </div>
+        </main>
+        <!-- Profile moved to the sidebar -->
+        <aside class="profile">
+            <img id="profile-picture" src="https://via.placeholder.com/100" alt="Profile">
+            <h3 id="profile-name"></h3>
+            <div class="info">
+                <div class="info-item"><span>DOB:</span> <span id="dob"></span></div>
+                <div class="info-item"><span>Gender:</span> <span id="gender"></span></div>
+                <div class="info-item"><span>Contact Info:</span> <span id="contact"></span></div>
+                <div class="info-item"><span>Emergency Contact:</span> <span id="emergency-contact"></span></div>
+            </div>
+        </aside>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
